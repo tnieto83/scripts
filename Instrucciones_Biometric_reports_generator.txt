@@ -1,0 +1,49 @@
+
+
+1. Addfile
+
+Lanzar ./biometric_reports_generator.sh addfile_XXXX, donde XXX es el apellido que le queramos dar a la carpeta (opcional). Carpeta con audios y el jsontemplate.txt
+>>>> report
+
+
+
+2. Generar json (unicamente)
+
+lanzar comando>>> ./biometric_reports_generator.sh jsongenerator (debe existir la carpeta "jsongenerator" Carpeta con audios y el jsontemplate.txt)
+>> json correspondientes a los audios 
+
+3. Verify
+
+a) generar json con jsongenerator (2)
+b) lanzar ./biometric_reports_generator.sh verify_XXXX, donde XXX es el apellido que le queramos dar a la carpeta (opcional)
+>>>> report
+
+
+
+Welcome to Test Biometric
+
+This tool has been created in order to simplify and speed up the testing process of the verbio biometrics API.
+Commands
+
+    ./biometric_reports_generator.sh addfile_[dir-name] - Test addfile.
+    ./biometric_reports_generator.sh jsongenerator - Json generator.
+    ./biometric_reports_generator.sh verify_[dir-name] - Test verify.
+
+Runtime environment
+
+❯ cd addfile
+.
+├── Audio2009.wav
+├── Audio2010.wav
+└── json_template.txt   # Modified template for test addfile
+
+❯ cd jsongenerator
+.
+├── Audio2001.wav
+├── Audio2002.wav
+└── json_template.txt   # Modified template for test verify
+
+❯ 
+.
+└── report-24-02-2021.csv   # Results report output
+
