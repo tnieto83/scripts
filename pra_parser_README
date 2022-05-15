@@ -1,0 +1,62 @@
+
+pra_parser.py will let you compare reference and automatic transcriptions when calculating the WER easily.
+
+COMMANDS & OUTPUTS
+
+
+python3 pra_parser.py R yourfile.pra >>> yourfile_raw.csv
+
+python3 pra_parser.py F yourfile.pra >>> yourfile_format.csv
+
+python 3 pra_parser.py help >> will display commands info
+
+EXAMPLES
+
+
+------------R (raw)---------------------
+
+python3 pra_parser.py R yourfile.pra >>> yourfile_raw.csv
+
+-----BEFORE RUNNING THE SCRIPT
+
+id: (es-es_verbio8k.es-es_06_060_test_siglas-./060_test_siglas/./2021_12_10_19781)
+Scores: (#C #S #D #I) 3 0 0 1
+REF:  denuncia ** extravío dni
+HYP:  denuncia DE extravío dni
+Eval:          I
+
+-----AFTER RUNNING THE SCRIPT
+
+2021_12_10_19781.wav;  denuncia ** extravío dni;  denuncia DE extravío dni
+
+
+--------F (format)-----------
+
+python3 pra_parser.py F yourfile.pra >>> yourfile_format.csv
+
+-----BEFORE RUNNING THE SCRIPT
+
+id: (es-es_verbio8k.es-es_06_060_test_siglas-./060_test_siglas/./2021_12_10_19781)
+Scores: (#C #S #D #I) 3 0 0 1
+REF:  denuncia ** extravío dni
+HYP:  denuncia DE extravío dni
+Eval:          I
+
+
+----AFTER RUNNING THE SCRIPT
+
+2021_12_10_19781.wav;denuncia extravío dni;denuncia de extravío dni
+
+
+
+
+
+
+
+
+
+
+
+
+
+
